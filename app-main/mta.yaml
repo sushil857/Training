@@ -127,7 +127,6 @@ resources:
       service-plan: hdi-shared
     properties:
       hdi-service-name: ${service-name}
-#
 
 
 
