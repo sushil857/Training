@@ -10,10 +10,10 @@ stages:
   Additional Unit Tests:
     npmExecuteScripts: false
   Acceptance:
-    cloudFoundryDeploy: false
+    cloudFoundryDeploy: true
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
-    cfOrg: "7ab6dbc1trial_dpedev"
-    cfSpace: "dpedev"
+    cfOrg: "development-poc"
+    cfSpace: "development_space"
     cfAppName: "app"
     cfCredentialsId: "deploy-to-cf"
     deployType: "standard"
@@ -23,12 +23,12 @@ stages:
   Release:
     cloudFoundryDeploy: true
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
-    cfOrg: "appdevelopment"
-    cfSpace: "development"
+    cfOrg: "development-poc"
+    cfSpace: "development_space"
     cfAppName: "app"
     cfCredentialsId: "deploy-to-cf"
     deployType: "standard"
-    tmsUpload: true
+    tmsUpload: false
 steps:
   artifactPrepareVersion:
     versioningType: "cloud_noTag"
